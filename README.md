@@ -12,6 +12,12 @@
 @Component 已经可以支持声明一个 bean 了，为何还要再弄个 @Bean 出来？
 答案请写在对应分支的 README.md 文件中
 
+@Component 作用于类，而@Bean 作用于方法
+
+@Component 通常是通过类路径扫描来自动侦测以及自动装配到 IOC 容器中, @Bean 注解通常是将方法返回值作为 bean 装载到IOC容器中
+
+@Bean 注解比 @Component 注解的自定义性更强，如当我们引用第三方库中的类需要装配到 Spring 容器时，只能通过 @Bean 来实现
+
 ### Problem 2
 
 分支：p2-starts-from-here
